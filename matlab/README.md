@@ -4,7 +4,8 @@ To illustrate the properties of kidney MR images, as well as the operation and p
 
 In the examples, the selected methods of image segmentation were applied to T1-weighted (T1w) and T2-weighted (T2w) images stored in the publicly available CHAOS database https://zenodo.org/record/3431873#.X8SwTM1KiUk [2]:   
 
-![CHAOS image datasets logo](https://github.com/MMIV-ML/KidneySegm/blob/main/matlab/assets/CHAOS-1.png)
+![CHAOS image datasets logo](https://github.com/MMIV-ML/KidneySegm/blob/master/matlab/assets/CHAOS-1.png)
+
 
 There are 40 CT and MR 3D abdominal images in CHAOS datasets, acquired for healthy subjects, split evenly into train and test sets. The DICOM files stored for subject #1 in the train set, along with the corresponding ground-truth PNG slices, were used for analysis here.
 
@@ -30,13 +31,13 @@ T1w, T2w and ground-truth (GT) 3D volumes were first extracted from the download
 
 **1.1** The ITK-SNAP [3] application was used to read the 35 DCM files contained in the unpacked directory **Train_Sets/MR/1/T1DUAL/DICOM_anon/InPhase/**  and to save the corresponding image as **T1_1.nii** volume. It contains 35 slices, each of 256x256 pixels, with voxel size of 1.894531250 mm x 1.894531250 mm x 5.5 mm. The top-left picture in the figure below is the slice #16, visualized in the example window of the ITK-SNAP program.
 
-![T1_1.nii file opened in ITK-SNAP window](https://github.com/MMIV-ML/KidneySegm/blob/main/matlab/assets/T1_1_x.png)
+![T1_1.nii file opened in ITK-SNAP window](https://github.com/MMIV-ML/KidneySegm/blob/master/matlab/assets/T1_1_x.png)
 
 **1.2** In the same way, **T2_1.nii** volume was extracted from **Train_Sets/MR/1/T2SPIR/DICOM_anon/** and saved. This volume is composed of 36, 7.7-mm-thick slices, each containing 256 x 256 square pixels, of 1.54297 mm side length.
 
 **1.3** The ITK-SNAP software was used again to co-register the T2w volume with T1w one. The T2w was the "moving" image, mutual information served as the similarity metric. The "multiresolution schedule" comprised scales from 8x downto 1x. The moving image was finally resampled with the use of linear interpolation to the T1w mesh and saved as **/img/T2_1r.nii**. Example sections of this volume opened in ITK-SNAP is shown below.
 
-![T2_1r.nii file opened in ITK-SNAP window](https://github.com/MMIV-ML/KidneySegm/blob/main/matlab/assets/T2_1r_x.png)
+![T2_1r.nii file opened in ITK-SNAP window](https://github.com/MMIV-ML/KidneySegm/blob/master/matlab/assets/T2_1r_x.png)
 
 Thus obtained three 256x256x35 MR images are available in this repository inside the **/img/** folder.
 
@@ -44,7 +45,7 @@ Thus obtained three 256x256x35 MR images are available in this repository inside
 
 The following figure shows the **/img/T1_1.nii** image opened in ITK-SNAP, with **/img/GT_1.nii** added as "another file".
 
-![T1_1.nii + GT_1.nii files opened in ITK-SNAP window](https://github.com/MMIV-ML/KidneySegm/blob/main/matlab/assets/T1_1_plus_GT_1x.png)
+![T1_1.nii + GT_1.nii files opened in ITK-SNAP window](https://github.com/MMIV-ML/KidneySegm/blob/master/matlab/assets/T1_1_plus_GT_1x.png)
 
 <!-- ![T2_1r.nii + GT_1.nii files opened in ITK-SNAP window](https://github.com/MMIV-ML/KidneySegm/blob/main/matlab/assets/T2_1r_plus_GT_1x.png) -->
 
@@ -72,7 +73,7 @@ The extracted VOIs were first used to point out inherent differences between the
 
 The **kid_seg_c.m** script was used for the purpose. Plots of the histograms are shown below and in Fig. 4 [1] with a discussion.
 
-![VOI histograms](https://github.com/MMIV-ML/KidneySegm/blob/main/matlab/assets/VOI_histogramsx.png)
+![VOI histograms](https://github.com/MMIV-ML/KidneySegm/blob/master/matlab/assets/VOI_histogramsx.png)
 
 Comparing the middle and lower histogram plots on the left pannel of the above figure, one can see that the kidney region and background voxel distributions for T1w overlap significantly. In fact, it can be easily demonstrated that thresholding T1w for segmentation produces a rather inacurate organ extraction, with some parts of neighboring organs interpreted as the kidney. 
 
@@ -83,25 +84,25 @@ Much more accurate kidney segmentation can be obtained with thresholding T2w ima
 
 The first VOI plane starts with k1 = 10 in the original image, see point 2 above. Then, the slice number in that image is equal to the VOI slice number plus 9. For the considered example, the slices 11, 16, 21, 26 and 29 were selected to illustrate a collection of representative shapes and intensity profiles of the kidney MR plane sections. They are shown in the following figure. These slices correspond to VOI xy images located at z = (2, 7, 12, 17, 20) multiplied by the slice thickness (5.5 mm).
 
-![kid_seg_2 slices](https://github.com/MMIV-ML/KidneySegm/blob/main/matlab/assets/kid_seg_rk_Slices.png)
+![kid_seg_2 slices](https://github.com/MMIV-ML/KidneySegm/blob/master/matlab/assets/kid_seg_rk_Slices.png)
 
 The **kid_seg_d.m** script reads the **/mat/rkT1.mat**, **/mat/rkT2.mat** and **/mat/rkGT.mat** files. For a given value of slice number, the MR images are thresholded at fixed values of lower and upper intensity threshold. The resulting images are displayed in a row, corresponding to respective column of Fig. 5 [1]. An example for slice #21 is shown below. 
 
-![kid_seg_fig5_column](https://github.com/MMIV-ML/KidneySegm/blob/main/matlab/assets/kid_seg_Fig5_col.png)
+![kid_seg_fig5_column](https://github.com/MMIV-ML/KidneySegm/blob/master/matlab/assets/kid_seg_Fig5_col.png)
 
 The **kid_seg_e.m** script reads the **/mat/rkT1.mat** and **/mat/rkT2.mat** files. For a given value of slice number, the MR images are thresholded at fixed values of lower and upper threshold. Four-connected binary components are identified in the resulting images and the largest among them are found. They are displayed side-by-side, corresponding to respective column of Fig. 6 [1]. An example for slice #21 is shown here: 
 
-![kid_seg_fig6_column](https://github.com/MMIV-ML/KidneySegm/blob/main/matlab/assets/kid_seg_Fig6_col.png)
+![kid_seg_fig6_column](https://github.com/MMIV-ML/KidneySegm/blob/master/matlab/assets/kid_seg_Fig6_col.png)
 
 The **kid_seg_f.m** script reads the **/mat/rkT1.mat**, **/mat/rkT2.mat** and **/mat/rkGT.mat** files. For a given value of slice number, the T2w image is thresholded at fixed values of lower and upper threshold. The largest connected-componenet of this binary image is found and, then, its centroid is computed (marked red in the figure below). Next, region growing algorithm is applied to T2w, starting from the centroid as seed point. The condition for pixel inclusion is the intensity value in the range <m(1-d),m(1+d)>, where m is the mean value of the current region and d is a fixed parameter, d=0.2 for slices 11, 16, 21, 26 and d=0.16 for slice 29. The image obtained after region growing is subjected to close-opening morphological operation, with a 5-pixel binary cross structuring element.  
 
 Finally, the T1w image is thresholded within the mask defined by the segmented T2w slice - for renal cortex extraction. This is shown in the rightmost picture below.
 
-![kid_seg_fig7_column](https://github.com/MMIV-ML/KidneySegm/blob/main/matlab/assets/kid_seg_Fig7_col.png)
+![kid_seg_fig7_column](https://github.com/MMIV-ML/KidneySegm/blob/master/matlab/assets/kid_seg_Fig7_col.png)
 
 The **kid_seg_f.m** script computes also the similarity metrics for 2D images (Tab. 1 in [1]:
 
-![kid_seg_2D_metrics](https://github.com/MMIV-ML/KidneySegm/blob/main/matlab/assets/kid_seg_2D_metrics.png)
+![kid_seg_2D_metrics](https://github.com/MMIV-ML/KidneySegm/blob/master/matlab/assets/kid_seg_2D_metrics.png)
 
 
 ### 5. T2w 3D segmentation
@@ -112,14 +113,14 @@ In **Step 2**, the level-set segmentation was manually corrected with ITK-SNAP t
 
 In **Step 3**, the manually prunned segmentation object was processed with mathematical morphology closing operation using a "spherical" structuring element of radius 3. A standard Image Processing Toolbox function of MATLAB:registered: was used for the purpose. The result was saved as **/img/T2w_LS-x-C.nii** and, respectively **/vtk/T2w_LS-x-C.vtk** (the rightmost picture). 
 
-![T2w segmentations surface](https://github.com/MMIV-ML/KidneySegm/blob/main/matlab/assets/3D_surf_allx.png)
+![T2w segmentations surface](https://github.com/MMIV-ML/KidneySegm/blob/master/matlab/assets/3D_surf_allx.png)
 
 
 ### 6. Quantitative evaluation
 
 The **kid_seg_f.m** and **kid_seg_g.m** scripts allow computation of various similarity metrics, to compare the segmentation results with the ground truth, for 2D and 3D images respectively. The Dice, Jackard, PPV, TPR, TNR, VE similarity coefficients and the Hausdorff distances defined in Section IV [1] are computed and placed in Table 1 [1]. An example below is a list of entries in the rightmost column of Table 1 [1] that correspond to the segmentation volume obtained in **Step 3** above, being an output of **kid_seg_g.m**. 
 
-![kid_seg_3D_metrics](https://github.com/MMIV-ML/KidneySegm/blob/main/matlab/assets/kid_seg_3D_metrics.png)
+![kid_seg_3D_metrics](https://github.com/MMIV-ML/KidneySegm/blob/master/matlab/assets/kid_seg_3D_metrics.png)
 
 ### References
 
