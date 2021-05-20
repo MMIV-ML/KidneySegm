@@ -125,12 +125,12 @@ The **kid_seg_f.m** and **kid_seg_g.m** scripts allow computation of various sim
 
 ### References
 
-[1] F. G. Zöllner, M. Kociński, L. Hansen, A. K. Golla, A. Šerifović-Trbalić, A. Lundervold, A. Materka, and P. Rogelj, "Kidney segmentation in renal magnetic resonance imaging - current status and prospects", IEEE Access 2021.
+[1] F. G. Zöllner, M. Kociński, L. Hansen, A. K. Golla, A. Šerifović-Trbalić, A. Lundervold, A. Materka, and P. Rogelj, "Kidney segmentation in renal magnetic resonance imaging - current status and prospects", IEEE Access, vol. 9, pp. 71577-71605, 2021, doi: 10.1109/ACCESS.2021.3078430. [[link](https://ieeexplore.ieee.org/document/9427136)]
 
-[2] A. E. Kavur, N. S. Gezer, M. Barıs, S. Aslan, P.-H. Conze, V. Groza, D. D. Pham, S. Chatterjee, P. Ernst, S. Özkan, B. Baydar, D. Lachinov, S. Han, J. Pauli, F. Isensee, M. Perkonigg, R. Sathish, R. Rajan, D. Sheet, G. Dovletov, O. Speck, A. Nürnberger, K. H. Maier-Hein, G. Bozdagı Akar, G. Ünal, O. Dicle, and M. A. Selver, “Chaos challenge - combined (CT-MR) healthy abdominal organ segmentation,” Medical Image Analysis, vol. 69, p. 101950, 2021.
+[2] A. E. Kavur, N. S. Gezer, M. Barıs, S. Aslan, P.-H. Conze, V. Groza, D. D. Pham, S. Chatterjee, P. Ernst, S. Özkan, B. Baydar, D. Lachinov, S. Han, J. Pauli, F. Isensee, M. Perkonigg, R. Sathish, R. Rajan, D. Sheet, G. Dovletov, O. Speck, A. Nürnberger, K. H. Maier-Hein, G. Bozdagı Akar, G. Ünal, O. Dicle, and M. A. Selver, “Chaos challenge - combined (CT-MR) healthy abdominal organ segmentation,” Medical Image Analysis, vol. 69, p. 101950, 2021. [[arXiv:2001.06535](https://arxiv.org/abs/2001.06535)]
 
-[3] P. A. Yushkevich and G. Gerig, "ITK-SNAP: An interactive medical image segmentation tool to meet the need for expert-guided segmentation of complex medical images," IEEE Pulse, vol. 8, no. 4, pp. 54-57, 2017.
+[3] P. A. Yushkevich and G. Gerig, "ITK-SNAP: An interactive medical image segmentation tool to meet the need for expert-guided segmentation of complex medical images," IEEE Pulse, vol. 8, no. 4, pp. 54-57, 2017. [[link](https://ieeexplore.ieee.org/document/7979667)]
 
 [4] Jimmy Shen (2020). Tools for NIfTI and ANALYZE image (https://www.mathworks.com/matlabcentral/fileexchange/8797-tools-for-nifti-and-analyze-image), MATLAB Central File Exchange. Retrieved December 6, 2020.
 
-[5] U. Ayachit, "The ParaView Guide: A Parallel Visualization Application", Kitware, 2015, ISBN 978-1930934306.
+[5] U. Ayachit, "The ParaView Guide: A Parallel Visualization Application", Kitware, 2015, ISBN 978-1930934306. [[https://www.paraview.org/paraview-guide](https://www.paraview.org/paraview-guide)]
