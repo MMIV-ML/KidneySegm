@@ -1,0 +1,42 @@
+name: kidney-segm
+
+channels:
+  - pytorch
+  - conda-forge
+  - simpleitk
+  - defaults
+
+
+dependencies:
+  - python==3.8
+  - pip
+  - git
+  - jupyter
+  - ipython
+  - ipykernel
+  - jupyterlab
+  - jupyter_contrib_nbextensions
+  - dcm2niix
+  - dicom2nifti
+  - dipy
+  - graphviz
+  - imageio
+  - ipywidgets
+  - matplotlib
+  - networkx
+  - nibabel
+  - nilearn
+  - numpy
+  - openpyxl
+  - pandas
+  - pydot
+  - pytorch
+  - torchvision
+  - scikit-learn
+  - scikit-image
+  - scipy
+  - seaborn
+  - SimpleITK
+  - statsmodels
+  - pip:
+    - nnunet    # https://github.com/MIC-DKFZ/nnUNet
