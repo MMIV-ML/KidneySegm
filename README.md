@@ -1,5 +1,7 @@
 # Kidney MRI segmentation examples #
 
+> Accompanying publication: https://ieeexplore.ieee.org/document/9427136
+
 To illustrate the properties of kidney MR images, as well as the operation and performance of selected methods for their segmentation, numerical examples were presented in Section III of the review paper [1]. To work them out, a volume of interest (VOI) containing the subject right-kidney was segmented using intensity thresholding, seeded region growing, level-set algorithms and basic mathematical morphology operations. The results are presented in Figs. 3-9 [1] and discussed in detail there. They were then quantitatively compared with the ground-truth information in Table 1 [1], using the metrics defined in Section IV [1]. The purpose of this repository is to provide the interested readers with the processed image data and developed code - for deeper understanding of the background and to facilitate further experimentation in this hot topic. 
 
 In the examples, the selected methods of image segmentation were applied to T1-weighted (T1w) and T2-weighted (T2w) images stored in the publicly available CHAOS database https://zenodo.org/record/3431873#.X8SwTM1KiUk [2]:   
