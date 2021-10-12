@@ -29,7 +29,7 @@ cd KidneySegm
 ### Configure the Python-environment:
 
 ```
-conda env create -f environment.yml
+conda env create -f ./notebooks/environment.yml
 ```
 
 ### Activate the environment:
@@ -60,6 +60,7 @@ The code and environment will be updated during the project. Run the following c
 * Update environment:
 
 ```
+cd notebooks
 conda activate kidney-segm
 conda env update
 ```
