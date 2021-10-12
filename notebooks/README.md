@@ -15,3 +15,5 @@ To illustrate the properties of kidney MR images, as well as the operation and p
 [4] Jimmy Shen (2020). Tools for NIfTI and ANALYZE image (https://www.mathworks.com/matlabcentral/fileexchange/8797-tools-for-nifti-and-analyze-image), MATLAB Central File Exchange. Retrieved December 6, 2020.
 
 [5] U. Ayachit, "The ParaView Guide: A Parallel Visualization Application", Kitware, 2015, ISBN 978-1930934306.
+
+[6] A. Klepaczko, E. Eikefjord, A. Lundervold. "Healthy Kidney Segmentation in the DCE-MR Images Using a Convolutional Neural Network and Temporal Signal Characteristics", Sensors 2021, 21, 6714. (https://doi.org/10.3390/s21206714)
