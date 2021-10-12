@@ -135,4 +135,4 @@ The **kid_seg_f.m** and **kid_seg_g.m** scripts allow computation of various sim
 
 [5] U. Ayachit, "The ParaView Guide: A Parallel Visualization Application", Kitware, 2015, ISBN 978-1930934306. [[https://www.paraview.org/paraview-guide](https://www.paraview.org/paraview-guide)]
 
-[6] A. Klepaczko, E. Eikefjord, A. Lundervold. "Healthy Kidney Segmentation in the DCE-MM Images Using a Convolutional Neural Network and Temporal Signal Characteristics", Sensors 2021, 21, 6714. (https://doi.org/10.3390/s21206714)
+[6] A. Klepaczko, E. Eikefjord, A. Lundervold. "Healthy Kidney Segmentation in the DCE-MR Images Using a Convolutional Neural Network and Temporal Signal Characteristics", Sensors 2021, 21, 6714. (https://doi.org/10.3390/s21206714)
